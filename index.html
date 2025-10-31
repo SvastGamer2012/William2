@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tu Regalo 💝</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+        <canvas id="corazones"></canvas>
+  <div id="inicio">
+    <h1>Quieres ver el regalo de tu grandioso, hermoso, guapisimo, inteligente y totalmente increible novio?</h1>
+    <div class="botones">
+      <button id="noBtn">No (si)</button>
+      <button id="siBtn">Si >w< </button>
+    </div>
+  </div>
+  <div id="contenido" class="oculto">
+    <div class="menu">
+      <button class="tablink" onclick="mostrarSeccion('fotos')">Fotitos de ti </button>
+      <button class="tablink" onclick="mostrarSeccion('carta')">Cartita para ti</button>
+      <button class="tablink" onclick="mostrarSeccion('quiz')">Preguntas para ti :p</button>
+    </div>
+    <div id="fotos" class="seccion activo">
+      <h2>Mis fotos favoritas sobre ti >w<💖 <p> (COMO PUEDES SER TAN HERMOSO? NECESITO MASS)</h2>
+      <div class="galeria">
+        <img src="Fotos william/Foto 1.jpg" alt="Foto 1" class="foto f1">
+        <img src="Fotos william/Foto 2.jpg" alt="Foto 2" class="foto f2">
+        <img src="Fotos william/Foto 3.jpg" alt="Foto 3" class="foto f3">
+        <img src="Fotos william/Foto 4.jpg" alt="Foto 4" class="foto f4">
+        <img src="Fotos william/Foto 5.jpg" alt="Foto 5" class="foto f5">
+      </div>
+    </div>
+    <div id="carta" class="seccion">
+      <h2 class="Letras_carta">Una carta para ti.</h2>
+      <p>
+        ¿Como nos conocimos?
+      </p>
+      <p>
+        Me acuerdo como empezo todo, como atraves de un simple comentario sucedio todo, desde que nos conocimos, nos entendimos, tuvimos los mismos gustos y bastantes cosas realeacionadas entre nosotros, desde esas charlas que tuvimos, senti una conexion contigo que no tuve con nadie mas, en ese momento pensaba que era simple amistad, haste hace unos dias.
+      </p>
+      <p>
+        Como me empece a <span>enamorar</span> de ti.
+      </p>
+      <p>
+        Todo empezo desde la primera semana que nos conocimos, cuando hablabamos hasta amanecer, cuando me compartias sobre tus gustos, me hablabas de ti, tus hermosos ojos, tu hermosa carita, tu personalidad <span>TAN</span> divertida, eras una persona con la cual podia <span>actuar como realmente era</span>, te convertistes en alguien <span>especial</span> (down.png) para mi, no paraba de pensarte, queria hablar siempre contigo y estar en todo momento cerca de ti, al pasar el tiempo yo aun estaba confundido por mis sentimientos, hasta que te me declarastes, senti tal emocion y esas <span>"Mariposas en el estomago"</span>, esa emocion tan intensa por saber que tu gustabas de mi, confirmo totalmente mis sentimientos hacia ati, no como una amistad ni mi mejor amigo, si no como mi esposo y pareja.
+      </p>
+      <p>
+        Queria desearte feliz cumpleaños dedicandote esta pequeña pagina, para intentar demostrar una fraccion de cuanto <span>TE AMO</span> , mi niño, quiero que sepas que eres mio, el cuanto te amo, realmente quiero que mi regalo sea valioso para ti.
+      </p>
+      <p class="Letras_carta"> <span>FELIZ CUMPLEAÑOS Y TE AMO, MI PRINCIPE.</span></p>
+    </div>
+          <div id="quiz" class="seccion oculto">
+      <h2>Examen sobre nosotros, completalo y mandame una captura y te dare tu otro regalo >w<</h2>
+      <div id="pregunta"></div>
+      <div id="opciones"></div>
+      <button id="siguiente" class="oculto">Siguiente ➜</button>
+      <div id="resultado" class="oculto">
+        <h3>Tu puntuación final:</h3>
+        <p id="notaFinal"></p>
+      </div>
+  </div>
+</div>
+
+
+  <script src="script.js"></script>
+  <script src="corazones.js"></script>
+  <script src="quiz.js"></script>
+</body>
+</html>

@@ -1,0 +1,191 @@
+body {
+  margin: 0;
+  font-family: 'Dancing Script', cursive;
+  font-size: 2rem;
+  background: linear-gradient(135deg, #1e3932, #2f4f4f 50%, #c0c0c0 90%);
+  background-repeat: no-repeat;      
+  background-attachment: fixed;      
+  background-size: cover;            
+  animation: fondo 5s ease infinite;
+  color: white;
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes fondo {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+h1, h2 {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  font-family: 'Dancing Script', cursive;
+  font-size: 2rem;
+}
+
+.botones {
+  margin-top: 20px;
+}
+
+button {
+  background-color: #ff6f91;
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  margin: 10px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff8fa3;
+  transform: scale(1.05);
+}
+
+.oculto {
+  display: none;
+}
+
+.menu {
+  display: flex;
+  overflow-x: auto;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 10px;
+  justify-content: center;
+  font-family: 'Dancing Script', cursive;
+font-size: 2rem;
+}
+
+.tablink {
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+  margin: 0 10px;
+}
+
+.seccion {
+  display: none;
+  animation: aparecer 0.5s ease;
+}
+
+.seccion.activo {
+  display: block;
+}
+
+@keyframes aparecer {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.galeria {
+  position: relative;
+  width: 100%;
+  min-height: 420px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px; 
+  padding: 20px;
+  transform: rotate(-8deg); 
+}
+
+.galeria img {
+  width: 170px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 25px;
+  box-shadow: 0 0 20px rgba(255, 182, 193, 0.6);
+  transition: transform 0.6s ease, opacity 1s ease;
+  opacity: 0.95;
+  transform-origin: center;
+}
+
+.galeria img:nth-child(1) { transform: rotate(-80deg); }
+.galeria img:nth-child(2) { transform: rotate(-75deg); }
+.galeria img:nth-child(3) { transform: rotate(-95deg); }
+.galeria img:nth-child(4) { transform: rotate(-67deg); }
+.galeria img:nth-child(5) { transform: rotate(-49deg); }
+
+
+@keyframes flotar {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-10px) scale(1.02); }
+}
+
+.galeria img:hover {
+  transform: scale(1.1) rotate(-85deg);
+  z-index: 5;
+}
+
+
+p {
+  max-width: 600px;
+  margin: 20px auto;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+#corazones {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+#carta {
+  
+  border-radius: 20px;
+  background-color: #D8A7B1;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 1.2rem;
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+  }
+
+  h1, h2 {
+    font-size: 1.5rem;
+  }
+
+  .galeria {
+    flex-wrap: wrap;
+    gap: 15px;
+    transform: rotate(0deg); /* evita que se corte */
+  }
+
+  .galeria img {
+    width: 80%;
+    max-width: 250px;
+    transform: rotate(0deg); /* se ven derechitas en celular */
+  }
+
+  .menu {
+    flex-wrap: wrap;
+    font-size: 1.3rem;
+  }
+
+  button {
+    padding: 10px 18px;
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  #carta {
+    margin: 10px;
+    padding: 20px;
+  }
+}
